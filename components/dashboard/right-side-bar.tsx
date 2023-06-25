@@ -33,7 +33,7 @@ const careerDatas = [
 
 export default function RightSideBar() {
   return (
-    <div className="flex flex-col gap-4 w-full max-w-[20%]">
+    <div className="flex flex-col gap-4 w-full max-w-[25%]">
       <div className="flex flex-col gap-2 w-full bg-white rounded-lg">
         {/* Cục filter career theo segment & job */}
         <div className="w-full flex gap-2 relative p-1">

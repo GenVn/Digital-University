@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { FirstPostCard, PostCard } from "./post-card"
 
@@ -9,9 +8,9 @@ const postDatas = [
       "https://m.media-amazon.com/images/I/51y8GUVKJoL._AC_UF894,1000_QL80_.jpg",
     postDate: "18 tháng 6",
     postTitle:
-      "Cách hoạt động của Internet và những điều bạn có thể biết hay chưa biết",
+      "Array and Object Methods: JavaScript's Toolkit or Circus Tricks?",
     postImgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--Ru_sh7cK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/23wprhpjjz7qje3cs5j1.png",
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--ANxGMqua--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7p2v0k5d16ekr5oncpxr.png",
     postTopic: "#server",
     postReaction: 3,
     postComment: 10,
@@ -56,7 +55,7 @@ const postDatas = [
 
 export default function Content() {
   return (
-    <main className="flex flex-col gap-4 w-full max-w-[60%] px-4">
+    <main className="flex flex-col gap-4 w-full max-w-[55%] px-4">
       {/* cục filter */}
       <div className="flex gap-4 w-full">
         <Link

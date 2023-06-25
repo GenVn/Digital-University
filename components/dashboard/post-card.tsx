@@ -35,7 +35,7 @@ export function FirstPostCard({
   postComment,
 }: FirstPostCardProps) {
   return (
-    <div className="flex flex-col gap-4 py-2 w-full max-h-md bg-white border border-gray-300 rounded-lg">
+    <div className="flex flex-col gap-4 w-full max-h-md bg-white border border-gray-300 rounded-lg">
       {/* hình của post */}
       <div className="w-full relative xl:h-[300px] max-h-64 h-full">
         <Image
@@ -46,9 +46,9 @@ export function FirstPostCard({
         />
       </div>
       {/* Bao post title, user icon, topics, reaction,... */}
-      <div className="flex flex-col gap-4 px-4 py-2">
+      <div className="flex flex-col gap-2">
         {/* Cục bao user post info */}
-        <div className="flex gap-4 h-[48px]">
+        <div className="flex gap-4 h-[48px] px-4">
           <Link href={"/"} className="w-12 h-12 relative">
             <Image
               src={authorImgSrc}
@@ -73,10 +73,10 @@ export function FirstPostCard({
           </div>
         </div>
         {/* cục bao title, topics, thanh react, comment,... */}
-        <div className="pl-16 flex flex-col gap-4">
+        <div className="pl-[80px] pr-3 flex flex-col gap-2">
           {/* title */}
           <h2
-            className="text-4xl cursor-pointer font-bold text-gray-950
+            className="text-3xl cursor-pointer font-extrabold text-gray-900
           hover:text-blue-700
             transition-all ease-in-out duration-100"
           >
@@ -93,7 +93,7 @@ export function FirstPostCard({
               {postTopic}
             </span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 pb-4">
             <span
               className=" px-2 py-1 rounded-lg text-gray-600 cursor-pointer
               transition-all ease-in-out duration-150
