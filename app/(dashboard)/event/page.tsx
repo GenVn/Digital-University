@@ -1,5 +1,8 @@
 import Header from "@/components/dashboard/header"
-import EventContent from "@/components/event/event-content"
+import {
+  EventContentElseWhere,
+  EventContentInLocation,
+} from "@/components/event/event-content"
 import EventFilter from "@/components/event/event-filter"
 
 export default function EventPage() {
@@ -8,7 +11,8 @@ export default function EventPage() {
       <Header />
       <div className="mt-[70px] w-full max-w-screen-2xl flex flex-col justify-center">
         <EventFilter />
-        <EventContent />
+        <EventContentInLocation />
+        <EventContentElseWhere />
       </div>
     </section>
   )
