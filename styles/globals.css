@@ -6,9 +6,16 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body {
-  background-color: #f5f5f5;
+
+@layer base {
+  :root {
+    --background: 245 245 245;
+
+    --primary: 23 23 23;
+    --primary-foreground: 255 255 255;
+  }
 }
+
 * {
   margin: 0;
   padding: 0;
