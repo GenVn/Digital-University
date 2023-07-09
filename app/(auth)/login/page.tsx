@@ -1,10 +1,10 @@
 import AuthForm from "@/components/user-auth-form"
-import { Metadata } from "next"
+// import { Metadata } from "next"
 
-export const medadata: Metadata = {
-  title: "Đăng Nhập | DGU",
-  description: "Đăng nhập vào DGU với tài khoản của bạn",
-}
+// export const medadata: Metadata = {
+//   title: "Đăng Nhập | DGU",
+//   description: "Đăng nhập vào DGU với tài khoản của bạn",
+// }
 
 export default function LoginPage() {
   return (

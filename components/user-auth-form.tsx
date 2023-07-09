@@ -21,6 +21,9 @@ export default function AuthForm() {
             magic_link: {
               email_input_label: "Email",
               button_label: "Đăng nhập",
+              loading_button_label: "Đang gửi mail...",
+              confirmation_text: "Kiểm tra email của bạn để đăng nhập",
+              email_input_placeholder: "Nhập email của bạn",
             },
           },
         }}
