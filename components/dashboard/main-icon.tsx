@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import Link from "next/link";
+import Link from "next/link"
 
 export default function MainIcon() {
   return (
@@ -13,7 +13,7 @@ export default function MainIcon() {
       </Link>
       <div className="flex items-center relative max-w-[250px] w-full leading-6">
         <svg
-          className="absolute left-4 fill-gray-600 w-4 h-4"
+          className="absolute left-4 fill-gray-700 w-4 h-4"
           aria-hidden="true"
           viewBox="0 0 24 24"
         >
@@ -24,12 +24,12 @@ export default function MainIcon() {
         <input
           placeholder="Tìm kiếm"
           type="search"
-          className="w-full h-[40px] bg-gray-50 leading-6 py-4 pl-10 border-2 
+          className="w-full h-[40px] bg-gray-100 leading-6 py-4 pl-10 border-2 
           border-transparent rounded-xl outline-none transition-all ease-in-out duration-300 
-          focus:outline-none focus:border-blue-300 focus:shadow-md focus:bg-white
-          hover:outline-none hover:border-blue-300 hover:shadow-md hover:bg-white"
+          focus:outline-none focus:border-ring focus:bg-white
+          hover:outline-none hover:border-ring hover:bg-white"
         ></input>
       </div>
     </div>
-  );
+  )
 }

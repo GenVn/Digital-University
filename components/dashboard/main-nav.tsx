@@ -39,8 +39,8 @@ export default function MainNavBar() {
         <div
           key={item.name}
           className={twMerge(
-            "h-[90%] w-32 border border-white",
-            pathname === item.path ? null : "hover:rounded-xl hover:bg-gray-100"
+            "h-[90%] w-32",
+            pathname === item.path ? null : "hover:rounded-lg hover:bg-gray-100"
           )}
         >
           <Link
@@ -50,13 +50,13 @@ export default function MainNavBar() {
             <item.icon
               className={twMerge(
                 "w-[28px] h-[28px]",
-                pathname === item.path ? "fill-blue-500" : "fill-gray-500"
+                pathname === item.path ? "fill-primary" : "fill-primary/60"
               )}
             />
           </Link>
           <div
             className={twMerge(
-              "w-full h-[10%] rounded-xl bg-blue-500 transition-all ease-in-out duration-150",
+              "w-full h-[10%] rounded-xl bg-primary transition-all ease-in-out duration-150",
               pathname === item.path ? null : "invisible"
             )}
           ></div>

@@ -3,7 +3,6 @@ import { FaTheaterMasks, FaRunning } from "react-icons/fa"
 import { AiOutlineHeart } from "react-icons/ai"
 import { MdOutlineVideogameAsset } from "react-icons/md"
 import { IoFastFood } from "react-icons/io5"
-import Image from "next/image"
 
 const filterDatas = [
   {

@@ -1,40 +1,11 @@
 import Image from "next/image"
 import { BsPeople } from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
+import Link from "next/link"
 
 const eventsInHCM = [
   {
-    name: "Founders Meetup: Vietnam",
-    imgSrc:
-      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F541572059%2F1343780716473%2F1%2Foriginal.20230623-071904?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c69cc122d86beb0ee1894123eeb33eae",
-    date: "28 Tháng 6, 15:30",
-    location: "The Sentry - Hồ Chí Minh",
-    price: 12.5,
-    eventOrganizer: "Tech in Asia",
-    follower: "5.8k",
-  },
-  {
-    name: "KlayVie Meetup - Shaping the Future of Tech",
-    imgSrc:
-      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F532562209%2F1585510109823%2F1%2Foriginal.20230609-044115?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C43%2C8000%2C4000&s=904089b74fd1d5d627c0449f2d76bff9",
-    date: "6 Tháng 7, 21:00",
-    location: "Capella Parkview • Hồ Chí Minh",
-    price: 5.0,
-    eventOrganizer: "KlayVie Foundation",
-    follower: "1.2k",
-  },
-  {
-    name: "DevX Global Tour Polygon Connect - APAC",
-    imgSrc:
-      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F534228179%2F701884336093%2F1%2Foriginal.20230612-163957?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3240%2C1620&s=0f043826b70fa2009748dba39afcf39b",
-    date: "5 Tháng 7, 13:00",
-    location:
-      "Thiskyhall Sala Convention Center, Ballroom 4 (entry via Mai Chi Tho Street) • Thủ Thiêm, Thành phố Hồ Chí Minh",
-    price: 8.5,
-    eventOrganizer: "Polygon Labs",
-    follower: "20.8k",
-  },
-  {
+    id: 0,
     name: "NEAR APAC 2023 - Unlimited Future",
     imgSrc:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F516555689%2F1134384159683%2F1%2Foriginal.20230517-082233?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f4cc0f811fbf5971da803a0303cffe1",
@@ -46,6 +17,41 @@ const eventsInHCM = [
     follower: "12.8k",
   },
   {
+    id: 1,
+    name: "KlayVie Meetup - Shaping the Future of Tech",
+    imgSrc:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F532562209%2F1585510109823%2F1%2Foriginal.20230609-044115?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C43%2C8000%2C4000&s=904089b74fd1d5d627c0449f2d76bff9",
+    date: "6 Tháng 7, 21:00",
+    location: "Capella Parkview • Hồ Chí Minh",
+    price: 5.0,
+    eventOrganizer: "KlayVie Foundation",
+    follower: "1.2k",
+  },
+  {
+    id: 2,
+    name: "DevX Global Tour Polygon Connect - APAC",
+    imgSrc:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F534228179%2F701884336093%2F1%2Foriginal.20230612-163957?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C3240%2C1620&s=0f043826b70fa2009748dba39afcf39b",
+    date: "5 Tháng 7, 13:00",
+    location:
+      "Thiskyhall Sala Convention Center, Ballroom 4 (entry via Mai Chi Tho Street) • Thủ Thiêm, Thành phố Hồ Chí Minh",
+    price: 8.5,
+    eventOrganizer: "Polygon Labs",
+    follower: "20.8k",
+  },
+  {
+    id: 3,
+    name: "Founders Meetup: Vietnam",
+    imgSrc:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F541572059%2F1343780716473%2F1%2Foriginal.20230623-071904?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c69cc122d86beb0ee1894123eeb33eae",
+    date: "28 Tháng 6, 15:30",
+    location: "The Sentry - Hồ Chí Minh",
+    price: 12.5,
+    eventOrganizer: "Tech in Asia",
+    follower: "5.8k",
+  },
+  {
+    id: 4,
     name: "LaunchSpace: Blink Pitch With Top Global VCs & Foundations",
     imgSrc:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F538360149%2F1614593417803%2F1%2Foriginal.20230619-022953?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=23%2C175%2C2688%2C1344&s=e1c1037fee0291e56f4e6009ab9db022",
@@ -56,6 +62,7 @@ const eventsInHCM = [
     follower: "5.8k",
   },
   {
+    id: 5,
     name: "Chiếu phim Bluey tại TP Hồ Chí Minh/Bluey Screenings in Ho Chi Minh City",
     imgSrc:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F539043809%2F310039427666%2F1%2Foriginal.20230620-012343?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C940%2C470&s=07f5aaba1c92fadf708ec86b6dc343a3",
@@ -67,6 +74,7 @@ const eventsInHCM = [
     follower: "5.8k",
   },
   {
+    id: 6,
     name: "Fin Voyage! Set Sail to Finland",
     imgSrc:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F530099939%2F581860147073%2F1%2Foriginal.20230606-105741?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=e69373b2b438c502cd35f8778d334da0",
@@ -77,6 +85,7 @@ const eventsInHCM = [
     follower: "5.8k",
   },
   {
+    id: 7,
     name: "The Financial Investment Expo 2023 (Vietnam)",
     imgSrc:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F508191229%2F1525449024763%2F1%2Foriginal.20230505-025853?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C43%2C1080%2C540&s=918a00bb7a95350d174116daae1c6a28",
@@ -222,9 +231,10 @@ export function EventContentInLocation() {
       <span className="text-2xl text-gray-700 font-semibold">
         Sự kiện diễn ra ở Hồ Chí Minh
       </span>
-      <div className="w-full grid grid-cols-4 gap-8 gap-y-8 justify-between">
+      <div className="w-full grid grid-cols-3 gap-8 gap-y-8 justify-between">
         {eventsInHCM.map((event) => (
-          <div
+          <Link
+            href={`event/${event.id}`}
             key={event.name}
             className="hover:shadow-2xl hover:rounded-lg 
             cursor-pointer group transition-all ease-in-out
@@ -267,7 +277,7 @@ export function EventContentInLocation() {
                 </p>
               </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -280,7 +290,7 @@ export function EventContentElseWhere() {
       <span className="text-2xl py-4 text-gray-700 font-semibold">
         Nhiều sự kiện khác
       </span>
-      <div className="w-full grid grid-cols-4 gap-8 gap-y-8 justify-between">
+      <div className="w-full grid grid-cols-3 gap-8 gap-y-8 justify-between">
         {eventsElseWhere.map((event) => (
           <div
             key={event.name}
