@@ -2,9 +2,14 @@
 import { Auth } from "@supabase/auth-ui-react"
 import { ThemeSupa } from "@supabase/auth-ui-shared"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import { useEffect } from "react"
 
 export default function AuthForm() {
   const supabase = createClientComponentClient()
+  let callBackURL
+  useEffect(() => {
+    callBackURL = `${location.origin}/auth/callback`
+  })
 
   return (
     <div className="w-1/2">
@@ -15,7 +20,7 @@ export default function AuthForm() {
         theme="light"
         showLinks={false}
         providers={["google", "facebook"]}
-        redirectTo={`${location.origin}/auth/callback`}
+        redirectTo={callBackURL}
         localization={{
           variables: {
             magic_link: {
